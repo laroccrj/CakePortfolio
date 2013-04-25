@@ -2,11 +2,11 @@
 	$this->Html->css('art', null, array('inline' => false));
 	$this->Html->script('art', array('inline' => false));
 ?> 
-<div id="catagories">
-	<?php foreach ($categories as $category): ?>
-	<a href="/arts/index/<?php echo $category['Categorie']['id'] ?>">
-		<div class="catagory">
-			<?php echo $category['Categorie']['name'] ?>
+<div id="Categories">
+	<?php foreach ($Categories as $Category): ?>
+	<a href="/arts/index/<?php echo $Category['Categorie']['id'] ?>">
+		<div class="Category">
+			<?php echo $Category['Categorie']['name'] ?>
 		</div>
 	</a>
 	<?php endforeach; ?>

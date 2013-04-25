@@ -10,9 +10,9 @@ class ArtsController extends AppController {
 			$id = $firstCategory['Categorie']['id'];
 		}
         $this->set('jsVars', $this->Art->find('all', array(
-			'conditions' => array('Art.category' => $id)
+			'conditions' => array('Art.Category' => $id)
 		)));
-		$this->set('categories', $this->Categorie->find('all'));
+		$this->set('Categories', $this->Categorie->find('all'));
     }
 	
 	public function admin() {
@@ -39,7 +39,7 @@ class ArtsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Art->set('name', $this->request->data('name'));
 			$this->Art->set('description', $this->request->data('description'));
-			$this->Art->set('category', $this->request->data('category'));
+			$this->Art->set('Category', $this->request->data('Category'));
 			$this->Art->set('image', $this->handleImage());
 			if ($this->Art->save()) {
                 $this->Session->setFlash('Art added');
@@ -48,7 +48,7 @@ class ArtsController extends AppController {
                 $this->Session->setFlash('Unable to add art.');
             }
 		} else {
-			$this->set('categories', $this->Categorie->find('all'));
+			$this->set('Categories', $this->Categorie->find('all'));
 		}
 	}
 	

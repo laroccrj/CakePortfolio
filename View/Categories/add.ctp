@@ -1,5 +1,5 @@
 <h1>Add Category</h1>
-<form name="Category" method="post" action="/categories/add">
+<form name="Category" method="post" action="/Categories/add">
 	<div>
 		Name:<br/>
 		<input name="name" type="text">

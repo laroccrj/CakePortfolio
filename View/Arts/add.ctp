@@ -14,10 +14,10 @@ echo $this->Session->flash();
 	</div>
 	<div>
 		Category:<br />
-		<select name="category">
-			<?php foreach ($categories as $category): ?>
-			<option value="<?php echo $category['Categorie']['id'] ?>">
-				<?php echo $category['Categorie']['name'] ?>
+		<select name="Category">
+			<?php foreach ($Categories as $Category): ?>
+			<option value="<?php echo $Category['Categorie']['id'] ?>">
+				<?php echo $Category['Categorie']['name'] ?>
 			</option>
 			<?php endforeach; ?>
 		</select>

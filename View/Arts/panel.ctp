@@ -19,7 +19,7 @@ echo $this->Html->link(
 <?php
 echo $this->Html->link(
 		'Edit Categories',
-		array('controller' => 'categories')
+		array('controller' => 'Categories')
 	);
 ?>
 </p>

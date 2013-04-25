@@ -22,14 +22,14 @@ echo $this->Html->link(
 ?>
 </p>
 <table>
-<?php foreach ($categories as $category): ?>
+<?php foreach ($Categories as $Category): ?>
 <tr>
-	<td><?php echo $category['Categorie']['name'] ?></td>
+	<td><?php echo $Category['Categorie']['name'] ?></td>
 	<td>
-		<?php echo $this->Html->link('Edit', array('action' => 'edit', $category['Categorie']['id'])); ?>
+		<?php echo $this->Html->link('Edit', array('action' => 'edit', $Category['Categorie']['id'])); ?>
 	</td>
 	<td>
-		<?php echo $this->Html->link('Delete', array('action' => 'delete', $category['Categorie']['id'])); ?>
+		<?php echo $this->Html->link('Delete', array('action' => 'delete', $Category['Categorie']['id'])); ?>
 	</td>
 </tr>
 <?php endforeach; ?>
