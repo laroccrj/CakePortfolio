@@ -1,0 +1,43 @@
+#catagories {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:20%;
+}
+#catagories .catagory{
+	text-align:right;
+	padding:10px;
+	margin-top:10px;
+	background-color:#dddddd;
+	font-size:18px;
+	width:80%;
+}
+#catagories .catagory:hover{
+	color:#FFFFFF;
+	background-color:#2d2d2d;
+}
+#art {
+	position:relative;
+	margin-left:20%;
+	width:80%;
+}
+#art #imageContainer{
+	width:70%;
+}
+#art #imageContainer img {
+	width: 100%;
+	height: auto;
+}
+#art #info {
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:25%;
+}
+#art #info #title{
+	text-align:center;
+	font-size:36px;
+	font-weight:bold;
+	color:#2d2d2d;
+	padding-bottom:20px;
+}
