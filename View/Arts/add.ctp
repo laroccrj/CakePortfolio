@@ -1,7 +1,7 @@
 <h1>Add New Art</h1>
 <?php
-echo $this->element('logout');
-echo $this->Session->flash();
+    echo $this->element('logout');
+    echo $this->Session->flash();
 ?>
 <form name="Art" method="post" action="/arts/add" enctype="multipart/form-data">
     <div>

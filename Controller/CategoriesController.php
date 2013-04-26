@@ -33,12 +33,12 @@ class CategoriesController extends AppController {
     
     public function edit($id = null){
         if (!$id) {
-            throw new NotFoundException(__('Invalid post'));
+            throw new NotFoundException(__('Invalid category'));
         }
 
         $Category = $this->Categorie->findById($id);
         if (!$Category) {
-            throw new NotFoundException(__('Invalid post'));
+            throw new NotFoundException(__('Invalid category'));
         }
 
         if ($this->request->is('post') || $this->request->is('put')) {
@@ -55,6 +55,7 @@ class CategoriesController extends AppController {
         if (!$this->request->data) {
             $this->request->data = $Category;
         }
+        
     }
     
     private function requireAdmin() {

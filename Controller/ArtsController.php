@@ -47,9 +47,9 @@ class ArtsController extends AppController {
             } else {
                 $this->Session->setFlash('Unable to add art.');
             }
-        } else {
-            $this->set('Categories', $this->Categorie->find('all'));
         }
+        
+        $this->set('Categories', $this->Categorie->find('all'));
     }
     
     public function delete($id = null){
@@ -62,6 +62,35 @@ class ArtsController extends AppController {
         $this->Art->delete($id, false);
         $this->Session->setFlash('Art deleted');
         $this->redirect(array('action' => 'panel'));
+    }
+    
+    public function edit($id = null){
+        if (!$id) {
+            throw new NotFoundException(__('Invalid art'));
+        }
+
+        $art = $this->Art->findById($id);
+        if (!$art) {
+            throw new NotFoundException(__('Invalid art'));
+        }
+
+        if ($this->request->is('post') || $this->request->is('put')) {
+            $this->Art->id = $id;
+            $this->Art->set('name', $this->request->data('name'));
+            $this->Art->set('category', $this->request->data('Category'));
+            if ($this->Art->save($this->request->data)) {
+                $this->Session->setFlash('Art has been updated.');
+                $this->redirect(array('action' => 'panel'));
+            } else {
+                $this->Session->setFlash('Unable to update Art.');
+            }
+        }
+
+        if (!$this->request->data) {
+            $this->request->data = $art;
+        }
+        
+        $this->set('Categories', $this->Categorie->find('all'));
     }
     
     public function logout(){

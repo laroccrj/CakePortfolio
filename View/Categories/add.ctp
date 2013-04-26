@@ -7,4 +7,5 @@
     <div>
         <input name="submit" type="submit" value="Add Category">
     </div>
+    <?php echo $this->Session->flash(); ?>
 </form>
