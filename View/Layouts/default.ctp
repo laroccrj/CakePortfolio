@@ -24,13 +24,13 @@
         Your Name
     </div>
     <div id="nav">
-        <a href="">
+        <a href="/arts/">
             <div class="link">Art</div>
         </a>
-        <a href="">
+        <a href="/arts/about/">
             <div class="link">About</div>
         </a>
-        <a href="">
+        <a href="/arts/contact/">
             <div class="link">Contact</div>
         </a>
     </div>

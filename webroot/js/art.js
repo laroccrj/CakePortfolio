@@ -3,7 +3,7 @@ var selected = 0;
 
 $(function(){
     size = jsVars.length - 1;
-    setMainPicture(jsVars[0]["Art"]);
+    if(size >= 0) setMainPicture(jsVars[0]["Art"]);
     $('#leftArrow').on('click', function(move) {
         if(selected - 1 < 0) return;
         selected--;
@@ -17,9 +17,11 @@ $(function(){
 });
 
 function setMainPicture(source) {
-    $("#image").attr("src", "/img/uploads/" + source["image"]);
-    $('#title').html(source["name"]);
-    $('#number').html((selected + 1) + '/' + (size + 1)); 
+    if(size >= 0){
+        $("#image").attr("src", "/img/uploads/" + source["image"]);
+        $('#title').html(source["name"]);
+        $('#number').html((selected + 1) + '/' + (size + 1));
+    }
 }
 
 

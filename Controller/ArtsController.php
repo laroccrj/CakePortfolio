@@ -93,6 +93,14 @@ class ArtsController extends AppController {
         $this->set('Categories', $this->Categorie->find('all'));
     }
     
+    public function about() {
+    
+    }
+    
+    public function contact() {
+    
+    }
+    
     public function logout(){
         $this->Session->write('admin',false);
         $this->redirect(array('action' => 'index'));

@@ -21,7 +21,7 @@
             <img src="\img\left_arrow.png">
         </div>
         <div id="number">
-            1/1
+            0/0
         </div>
         <div class="arrow" id="rightArrow">
             <img src="\img\right_arrow.png">
