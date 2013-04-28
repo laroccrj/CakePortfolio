@@ -53,6 +53,7 @@ class ArtsController extends AppController {
     }
     
     public function delete($id = null){
+        $this->requireAdmin();
         if (!$id) {
             throw new NotFoundException(__('Invalid Category'));
         }
@@ -65,6 +66,7 @@ class ArtsController extends AppController {
     }
     
     public function edit($id = null){
+        $this->requireAdmin();
         if (!$id) {
             throw new NotFoundException(__('Invalid art'));
         }
